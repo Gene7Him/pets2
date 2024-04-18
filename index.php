@@ -20,6 +20,21 @@ $f3->route('GET /', function(){
     $view = new Template();
     echo $view->render('views/home.html');
 });
+
+
+$f3->route('GET|POST /order/pets', function(){
+    //echo '<h1>Order</h1>';
+
+// Render a Order view page
+    $view = new Template();
+    echo $view->render('views/pet-order.html');
+});
+
+
+
+
+
+
 // Run Fat-Free
 $f3->run();
 
